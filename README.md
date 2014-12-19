@@ -52,6 +52,7 @@ Logs in to Pastebin. Any actions requiring a login should be placed within the c
 paste.get(paste_id, function(success, data) {
     //data contains the contents of the paste 
 });
+```
 
 Gets the contents of a paste. Note that the ID of a paste should be supplied, not the URL - e.g. `uRUYcpnR`, not `http://pastebin.com/uRUYcpnR`.
 
