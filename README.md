@@ -1,11 +1,11 @@
-#better-pastebin
+# better-pastebin
 
 The Pastebin API wrapper Node deserves. `better-pastebin` is the most fully-featured module available for connecting to [pastebin.com](http://pastebin.com), both to its API and directly to the site itself for accomplishing tasks that the API doesn't support. It uses [`cheerio`](https://github.com/cheeriojs/cheerio), [`request`](https://github.com/request/request), and [`xml2js`](https://github.com/Leonidas-from-XIV/node-xml2js).
 
-##Installation
-    npm install better-pastebin
+## Installation
+`npm install better-pastebin`
 
-##Example
+## Example
 ```javascript
 var paste = require("better-pastebin");
 
@@ -30,15 +30,15 @@ paste.login("username", "password", function(success, data) {
 });
 ```
 
-##Usage
-###Setting the devkey
+## Usage
+### Setting the devkey
 ```javascript
 paste.setDevKey("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 ```
 
 This is necessary before performing any other API call. It's synchronous, so it doesn't require a callback. You can find your devkey [on pastebin.com](http://pastebin.com/api) after signing in.
 
-###Logging in
+### Logging in
 ```javascript
 paste.login(username, password, function(success, data) {
     //data contains this session's userkey
@@ -47,7 +47,7 @@ paste.login(username, password, function(success, data) {
 
 Logs in to Pastebin. Any actions requiring a login should be placed within the callback.
 
-###Getting a paste
+### Getting a paste
 ```javascript
 paste.get(paste_id, function(success, data) {
     //data contains the contents of the paste 
@@ -56,7 +56,7 @@ paste.get(paste_id, function(success, data) {
 
 Gets the contents of a paste. Note that the ID of a paste should be supplied, not the URL - e.g. `uRUYcpnR`, not `http://pastebin.com/uRUYcpnR`.
 
-###Creating a paste
+### Creating a paste
 ```javascript
 paste.create(options, function(success, data) {
     //data contains the URL of the created paste
@@ -72,7 +72,7 @@ Creates a new paste. You do not need to be logged in to do this, but you can onl
 * `options.privacy` (default: `"0"`): The privacy of the paste.
 * `options.name` (default: `""`): The name of the paste.
 
-###Creating a paste from a file
+### Creating a paste from a file
 ```javascript
 paste.createFromFile(options, function(success, data) {
     //data contains the URL of the created paste
@@ -83,7 +83,7 @@ Creates a new paste from the contents of a file. This works the same way that `p
 
 * `options.encoding` (default: `"utf8"`): The encoding of the file.
 
-###Editing a paste
+### Editing a paste
 ```javascript
 paste.edit(paste_id, options, function(success, data) {
     //data contains the new contents of the paste
@@ -100,7 +100,7 @@ Updates a paste's contents. You must be logged in to do this, and you can only e
 
 If left unspecified, these default to the paste's existing options.
 
-###Listing the logged-in user's pastes
+### Listing the logged-in user's pastes
 ```javascript
 paste.list(limit, function(success, data) {
     //data contains an array of objects of information about each paste
@@ -109,7 +109,7 @@ paste.list(limit, function(success, data) {
 
 Lists up to 1,000 of the logged-in user's created pastes. `limit` specifies how many pastes to return; it can be a number between 1 and 1,000, and defaults to 50. You must be logged in to do this.
 
-###Listing trending pastes
+### Listing trending pastes
 ```javascript
 paste.listTrending(function(success, data) {
     //data contains an array of objects of information about each paste
@@ -118,7 +118,7 @@ paste.listTrending(function(success, data) {
 
 Lists currently trending pastes. The array of pastes is identical in structure to the one returned by `paste.list`.
 
-###Deleting a paste
+### Deleting a paste
 ```javascript
 paste.delete(paste_id, function(success, data) {
     //data contains the ID of the deleted paste
@@ -127,7 +127,7 @@ paste.delete(paste_id, function(success, data) {
 
 Deletes a paste. You must be logged in to do this, and you can only delete a paste that you created. Note that the ID of a paste should be supplied, not the URL - e.g. `uRUYcpnR`, not `http://pastebin.com/uRUYcpnR`.
 
-###Getting information about the logged-in user
+### Getting information about the logged-in user
 ```javascript
 paste.user(function(success, data) {
     //data contains an object of information about the logged-in user
@@ -136,25 +136,29 @@ paste.user(function(success, data) {
 
 Returns information about the logged-in user. You must be logged in to do this.
 
-###Valid options
-####`expires`
-    N = Never
-    10M = 10 Minutes
-    1H = 1 Hour
-    1D = 1 Day
-    1W = 1 Week
-    2W = 2 Weeks
-    1M = 1 Month
+### Valid options
+#### `expires`
+```
+N = Never
+10M = 10 Minutes
+1H = 1 Hour
+1D = 1 Day
+1W = 1 Week
+2W = 2 Weeks
+1M = 1 Month
+```
 
-####`privacy`
-    0 = Public
-    1 = Unlisted
-    2 = Private
+#### `privacy`
+```
+0 = Public
+1 = Unlisted
+2 = Private
+```
 
 Note that private pastes can only be created if you are signed in. These values should be passed as a string, because `0` is a falsy value and can cause some issues.
 
-####`format`
-Refer to http://pastebin.com/api#5 for the full list of syntax highlighting options.
+#### `format`
+Refer to http://pastebin.com/api# 5 for the full list of syntax highlighting options.
 
-###License
+### License
 All code in this repository is licensed under GPL v3. See `LICENSE` for more information.
