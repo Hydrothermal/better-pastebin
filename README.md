@@ -161,4 +161,4 @@ Note that private pastes can only be created if you are signed in. These values 
 Refer to http://pastebin.com/api# 5 for the full list of syntax highlighting options.
 
 ### License
-All code in this repository is licensed under GPL v3. See `LICENSE` for more information.
+All code in this repository is licensed under the MIT license. See `LICENSE` for more information.

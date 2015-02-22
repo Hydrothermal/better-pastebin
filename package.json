@@ -4,7 +4,7 @@
         "name": "Hydrothermal",
         "email": "curradid@yahoo.com"
     },
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "The Pastebin API wrapper Node deserves",
     "keywords": [
         "pastebin",
@@ -23,6 +23,6 @@
     "bugs": {
         "url": "https://github.com/Hydrothermal/better-pastebin/issues"
     },
-    "license": "GPL-3.0",
+    "license": "MIT",
     "homepage": "https://github.com/Hydrothermal/better-pastebin"
 }
