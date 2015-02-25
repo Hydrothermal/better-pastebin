@@ -4,7 +4,7 @@
         "name": "Hydrothermal",
         "email": "curradid@yahoo.com"
     },
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "The Pastebin API wrapper Node deserves",
     "keywords": [
         "pastebin",

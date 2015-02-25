@@ -1,5 +1,7 @@
 # better-pastebin
 
+[![NPM](https://nodei.co/npm/better-pastebin.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/better-pastebin/)
+
 The Pastebin API wrapper Node deserves. `better-pastebin` is the most fully-featured module available for connecting to [pastebin.com](http://pastebin.com), both to its API and directly to the site itself for accomplishing tasks that the API doesn't support. It uses [`cheerio`](https://github.com/cheeriojs/cheerio), [`request`](https://github.com/request/request), and [`xml2js`](https://github.com/Leonidas-from-XIV/node-xml2js).
 
 ## Installation
