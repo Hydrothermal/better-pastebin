@@ -2,9 +2,9 @@
     "name": "better-pastebin",
     "author": {
         "name": "Hydrothermal",
-        "email": "curradid@yahoo.com"
+        "email": "hydrothermal@tuta.io"
     },
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "The Pastebin API wrapper Node deserves",
     "keywords": [
         "pastebin",
