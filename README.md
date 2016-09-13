@@ -56,7 +56,7 @@ paste.get(paste_id, function(success, data) {
 });
 ```
 
-Gets the contents of a paste. Note that the ID of a paste should be supplied, not the URL - e.g. `uRUYcpnR`, not `http://pastebin.com/uRUYcpnR`.
+Gets the contents of a paste. Either the ID or the URL of a paste can be supplied.
 
 ### Creating a paste
 ```javascript
@@ -92,7 +92,7 @@ paste.edit(paste_id, options, function(success, data) {
 });
 ```
 
-Updates a paste's contents. You must be logged in to do this, and you can only edit a paste that you created. Note that the ID of a paste should be supplied, not the URL - e.g. `uRUYcpnR`, not `http://pastebin.com/uRUYcpnR`. `options` can either be the new contents of the paste as a string, or an object containing one or more of the following keys:
+Updates a paste's contents. You must be logged in to do this, and you can only edit a paste that you created. Either the ID or the URL of a paste can be supplied. `options` can either be the new contents of the paste as a string, or an object containing one or more of the following keys:
 
 * `options.contents`: The new contents of the paste; this is the only mandatory property.
 * `options.expires`: When the paste should expire 
@@ -127,7 +127,7 @@ paste.delete(paste_id, function(success, data) {
 });
 ```
 
-Deletes a paste. You must be logged in to do this, and you can only delete a paste that you created. Note that the ID of a paste should be supplied, not the URL - e.g. `uRUYcpnR`, not `http://pastebin.com/uRUYcpnR`.
+Deletes a paste. You must be logged in to do this, and you can only delete a paste that you created. Either the ID or the URL of a paste can be supplied.
 
 ### Getting information about the logged-in user
 ```javascript
@@ -160,7 +160,7 @@ N = Never
 Note that private pastes can only be created if you are signed in. These values should be passed as a string, because `0` is a falsy value and can cause some issues.
 
 #### `format`
-Refer to http://pastebin.com/api# 5 for the full list of syntax highlighting options.
+Refer to http://pastebin.com/api#5 for the full list of syntax highlighting options.
 
 ### License
 All code in this repository is licensed under the MIT license. See `LICENSE` for more information.
