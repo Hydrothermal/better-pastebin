@@ -4,7 +4,7 @@
         "name": "Hydrothermal",
         "email": "hydrothermal@tuta.io"
     },
-    "version": "0.1.6",
+    "version": "0.2.0",
     "description": "The Pastebin API wrapper Node deserves",
     "keywords": [
         "pastebin",
