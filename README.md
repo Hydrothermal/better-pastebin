@@ -69,7 +69,7 @@ Creates a new paste. You do not need to be logged in to do this, but you can onl
 
 * `options.contents`: The contents of the paste; this is the only mandatory property.
 * `options.anonymous` (default: `false`): If true, the paste will be created as a guest even if logged in.
-* `options.expires` (default: `"N"`): When the paste should expire 
+* `options.expires` (default: `"N"`): When the paste should expire.
 * `options.format` (default: `"text"`): The syntax highlighting of the paste.
 * `options.privacy` (default: `"0"`): The privacy of the paste.
 * `options.name` (default: `""`): The name of the paste.
@@ -94,8 +94,8 @@ paste.edit(paste_id, options, function(success, data) {
 
 Updates a paste's contents. You must be logged in to do this, and you can only edit a paste that you created. Either the ID or the URL of a paste can be supplied. `options` can either be the new contents of the paste as a string, or an object containing one or more of the following keys:
 
-* `options.contents`: The new contents of the paste; this is the only mandatory property.
-* `options.expires`: When the paste should expire 
+* `options.contents`: The new contents of the paste.
+* `options.expires`: When the paste should expire.
 * `options.format`: The syntax highlighting of the paste.
 * `options.privacy`: The privacy of the paste.
 * `options.name`: The name of the paste.
