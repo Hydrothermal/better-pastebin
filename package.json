@@ -12,9 +12,9 @@
         "api"
     ],
     "dependencies": {
-        "request": ">=2.51.0",
-        "cheerio": ">=0.18.0",
-        "xml2js": ">=0.4.4"
+        "cheerio": "^1.0.0-rc.10",
+        "request": "^2.88.2",
+        "xml2js": "^0.4.23"
     },
     "repository": {
         "type": "git",
